@@ -14,9 +14,9 @@ const UserSchema              = new mongoose.Schema({
   updatedAt                 : { type: Date, default: Date.now() }
 })
 
-const User                    = mongoose.model('User', UserSchema)
+const User                  = mongoose.model('User', UserSchema)
 
-export const Serialize        = ({
+export const Serialize      = ({
   _id,
   email,
   username,
@@ -28,15 +28,15 @@ export const Serialize        = ({
   updatedAt,
 }) => {
   return {
-    _id               : _id,
-    email             : email,
-    username          : username,
-    firstname         : firstname,
-    surname           : surname,
-    active            : active,
-    lastLoggedInAt    : lastLoggedInAt,
-    createdAt         : createdAt,
-    updatedAt         : updatedAt,
+    _id                     : _id,
+    email                   : email,
+    username                : username,
+    firstname               : firstname,
+    surname                 : surname,
+    active                  : active,
+    lastLoggedInAt          : lastLoggedInAt,
+    createdAt               : createdAt,
+    updatedAt               : updatedAt,
   }
 }
 
